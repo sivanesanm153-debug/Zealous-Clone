@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Showrooms | Vertex XR</title>
+  <meta name="description"
+    content="Interactive web showrooms with customized product configurator systems and payment links. Multi-room digital shopping.">
+  <meta name="keywords"
+    content="virtual showrooms, 3d configurator, spatial retail, stripe integration, shopify 3d store">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="/style.css?v=5">
+  <link rel="stylesheet" href="/services/services.css">
+
+  <!-- CDNs: FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-service="showroom">
+
+  <!-- Background Glow Elements -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="/#" class="logo">
+        <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="/#" class="nav-link">Home</a></li>
+        <li><a href="/#services" class="nav-link active">Services</a></li>
+        <li><a href="/#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="/#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="/#process" class="nav-link">Process</a></li>
+        <li><a href="/#calculator" class="nav-link">AI Calculator</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main style="margin-top: 80px;">
+    <!-- HERO SECTION -->
+    <section id="hero" style="padding: 60px 0;">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-store"></i> Spatial E-Commerce
+          </div>
+          <h1 class="hero-title">Interactive Retail <span class="text-gradient">Virtual Showrooms</span></h1>
+          <p class="hero-description">Construct multi-room spatial shopping environments. Enable customers to inspect product assemblies, swap fabrics in real-time, and purchase natively in the browser.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">Start Showroom Project</a>
+            <a href="/#portfolio" class="btn btn-secondary">Enter Showroom</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <h4>60 FPS</h4>
+              <p>Smooth Interaction</p>
+            </div>
+            <div class="metric-item">
+              <h4>Direct</h4>
+              <p>E-Commerce Checkout</p>
+            </div>
+            <div class="metric-item">
+              <h4>WebXR</h4>
+              <p>&amp; VR Compatible</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual-wrapper">
+          <div class="canvas-container" id="canvas-container"></div>
+          <div class="viewer-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Drag to rotate, scroll to zoom
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS SECTION -->
+    <section class="what-is-section">
+      <div class="container">
+        <div class="what-is-card">
+          <div class="what-is-visual">
+            <div class="what-is-visual-glow" style="background: radial-gradient(circle, rgba(234, 179, 8, 0.2) 0%, transparent 70%);"></div>
+            <i class="fa-solid fa-shop"></i>
+          </div>
+          <div class="what-is-content">
+            <h2>What is a Virtual Showroom?</h2>
+            <p>A virtual showroom is an interactive spatial environment replicating a real physical store. It allows users to walk through collections, click on active product hotspots, and test custom configurator variables (materials, wood finish, colorways) before purchase.</p>
+            <p>At Vertex XR, we engineer multi-room virtual spaces that integrate with e-commerce payment APIs. We implement optimized asset pipelines to ensure your spatial storefront loads instantly on mobile, tablet, and VR web browsers alike.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES SECTION -->
+    <section id="capabilities" style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Showroom Capabilities</h2>
+          <p class="section-subtitle">Engage online buyers with tactile, spatial storefronts.</p>
+        </div>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-compass"></i></div>
+            <h4>Spatial Store Navigation</h4>
+            <p>Custom-themed layouts, navigation hot-spots, and spatial camera controls for walk-throughs.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-palette"></i></div>
+            <h4>Real-Time Configurator</h4>
+            <p>Texture swapper scripts allowing customers to swap wood grains, metals, or fabric colors instantly.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h4>Embedded Checkout</h4>
+            <p>Connect buy buttons natively to Stripe, Shopify Checkout, or custom e-commerce cart endpoints.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+            <h4>WebXR Headset Views</h4>
+            <p>Let headset users experience depth, scale, and spatial placement inside your digital collections.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE BLOCKS (ALTERNATING) -->
+    <section class="feature-blocks">
+      <div class="container">
+        <!-- Block 1 -->
+        <div class="feature-block">
+          <div class="feature-block-content">
+            <h3>Interactive Material Swap</h3>
+            <p>We deploy high-quality material coordinates on product meshes. Buyers toggle between brushed chrome, brass, canvas, or leather finishes, and the 3D scene re-renders the specular gloss and normal maps in real-time.</p>
+          </div>
+          <div class="feature-block-image">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+        </div>
+        <!-- Block 2 -->
+        <div class="feature-block reverse">
+          <div class="feature-block-image">
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+          <div class="feature-block-content">
+            <h3>Explodable Hardware Layouts</h3>
+            <p>Improve product education. Allow customers to trigger disassembly animations, separating components (like watches, machinery, or lighting rigs) to inspect internal build details via floating specs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common questions regarding virtual showrooms and shopping integrations.</p>
+        </div>
+        <div class="faq-accordion-container">
+          <div class="faq-item">
+            <button class="faq-question">Can we connect this to our existing Shopify cart? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>Yes. We build integrations connecting our WebGL visual layers with your store cart APIs. When a customer adds an item, the script passes product IDs directly to Shopify, Stripe, or WooCommerce carts.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How long does a virtual showroom take to build? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>A complete multi-room showroom with configurator menus and payment flows takes between 4 to 8 weeks, covering room drafting, model optimization, menu logic, and secure payment setups.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is VR headset navigation supported? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>Yes. Our virtual showroom systems utilize responsive WebXR controllers, enabling Meta Quest or Apple Vision Pro users to walk through environments and select models using native hand trackings.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do these virtual environments load fast on mobile phones? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>Yes. We bake lighting maps directly into textures and implement model decimation (Google Draco compression). This ensures showrooms load in under three seconds on standard 4G/5G mobile grids.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" style="padding: 60px 0; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Discuss Your Project</h2>
+          <p class="section-subtitle">Open a spatial storefront for your brand. Contact our showroom builders.</p>
+        </div>
+        <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start; max-width: 900px; margin: 0 auto;">
+          <div class="contact-info">
+            <div class="contact-method-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="contact-icon" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h5 style="font-size: 1.1rem; margin-bottom: 4px;">Email Support</h5>
+                <p style="font-size: 0.95rem;">hello@vertexxr.com</p>
+              </div>
+            </div>
+            <div class="contact-method-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="contact-icon" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h5 style="font-size: 1.1rem; margin-bottom: 4px;">Phone</h5>
+                <p style="font-size: 0.95rem;">+1 (800) 555-3D-XR</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-card" style="background: var(--surface-trans); padding: 32px; border: 1px solid var(--border-light); border-radius: 16px; backdrop-filter: blur(16px);">
+            <form id="contact-form">
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Name</label>
+                <input type="text" id="name" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="John Doe" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Work Email</label>
+                <input type="email" id="email" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="john@company.com" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="company" style="display: block; margin-bottom: 8px; font-weight: 500;">Company</label>
+                <input type="text" id="company" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="Acme Corp">
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="service-select" style="display: block; margin-bottom: 8px; font-weight: 500;">Service Needed</label>
+                <select id="service-select" class="form-input" style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid var(--border-light); border-radius: 8px; color: #fff;">
+                  <option value="modeling">3D Modeling</option>
+                  <option value="rendering">3D Rendering</option>
+                  <option value="animation">3D Animation</option>
+                  <option value="ar">AR Experiences</option>
+                  <option value="vr">VR Solutions</option>
+                  <option value="digitaltwin">Digital Twins</option>
+                  <option value="showroom">Virtual Showrooms</option>
+                  <option value="gaming">Gaming Assets</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 24px;">
+                <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Project Message</label>
+                <textarea id="message" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff; height: 120px;" placeholder="Describe the virtual shop or configured product line you want to build..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/#" class="logo">
+            <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+          </a>
+          <p>Merging premium 3D modeling, photorealistic rendering, and app-less retail WebAR experiences to drive business results.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/3d-modeling">3D Modeling</a></li>
+            <li><a href="/services/3d-rendering">Product Rendering</a></li>
+            <li><a href="/services/3d-animation">3D Animations</a></li>
+            <li><a href="/services/ar-experiences">AR / VR Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="/#">E-Commerce</a></li>
+            <li><a href="/#">Furniture Manufacturing</a></li>
+            <li><a href="/#">Real Estate Visualization</a></li>
+            <li><a href="/#">Industrial Digital Twins</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/#portfolio">Our Work</a></li>
+            <li><a href="/#why-us">Why Choose Us</a></li>
+            <li><a href="/#process">Our Process</a></li>
+            <li><a href="/#contact">Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vertex XR. All rights reserved. Built with Antigravity.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Services Script -->
+  <script src="/services/services.js"></script>
+</body>
+
+</html>

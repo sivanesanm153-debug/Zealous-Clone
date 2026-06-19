@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex XR | Immersive 3D, AR/VR & Digital Twins Agency</title>
+  <meta name="description"
+    content="Vertex XR creates photorealistic 3D assets, product renderings, animations, AR/VR environments, and digital twins that drive business engagement and conversions.">
+  <meta name="keywords"
+    content="3d modeling, 3d rendering, xr agency, ar/vr development, digital twins, virtual showrooms">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=5">
+
+  <!-- CDNs: FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Background Glow Elements -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#calculator" class="nav-link">AI Calculator</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Free Consultation</a>
+      </div>
+      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-sparkles"></i> Next-Gen 3D Design & XR Solutions
+          </div>
+          <h1 class="hero-title">Transform Products Into <span class="text-gradient">Immersive 3D</span> Experiences
+          </h1>
+          <p class="hero-description">We help global brands build photorealistic 3D assets, high-fidelity animations,
+            AR/VR solutions, and real-time digital twins that boost engagement and skyrocket conversions.</p>
+          <div class="hero-ctas">
+            <a href="#calculator" class="btn btn-primary">Estimate Your Project</a>
+            <a href="#portfolio" class="btn btn-secondary">Explore Work <i class="fa-solid fa-arrow-right"
+                style="margin-left: 8px;"></i></a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <h4>500+</h4>
+              <p>Assets Delivered</p>
+            </div>
+            <div class="metric-item">
+              <h4>98%</h4>
+              <p>Client Satisfaction</p>
+            </div>
+            <div class="metric-item">
+              <h4>48h</h4>
+              <p>Initial Draft Delivery</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual-wrapper">
+          <div class="canvas-container" id="canvas-container"></div>
+          <div class="viewer-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Drag to rotate, scroll to zoom
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT LOGOS -->
+    <section id="clients">
+      <div class="container">
+        <div class="client-grid">
+          <div class="client-logo"><i class="fa-brands fa-shopify"></i> Shopify</div>
+          <div class="client-logo"><i class="fa-brands fa-unity"></i> Unity</div>
+          <div class="client-logo"><i class="fa-solid fa-gamepad"></i> Unreal</div>
+          <div class="client-logo"><i class="fa-brands fa-amazon"></i> Amazon</div>
+          <div class="client-logo"><i class="fa-solid fa-building"></i> Autodesk</div>
+          <div class="client-logo"><i class="fa-brands fa-meta"></i> Meta Quest</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Our Immersive Services</h2>
+          <p class="section-subtitle">Empowering product teams and designers with photorealistic pipelines, custom
+            engines, and real-time experiences.</p>
+        </div>
+
+        <div class="services-showcase-container">
+          <!-- Sticky Left Showcase Panel -->
+          <div class="services-sticky-showcase">
+            <div class="showcase-card">
+              <div class="showcase-glow" id="showcase-glow"></div>
+              <div class="showcase-icon-large" id="showcase-icon"><i class="fa-solid fa-shapes"></i></div>
+              <h3 id="showcase-title">3D Modeling</h3>
+              <p id="showcase-desc">Production-ready high/low poly models optimized for web, gaming, and AR
+                visualization.</p>
+
+              <!-- Subtle preview window inside the showcase -->
+              <div class="showcase-preview-frame">
+                <div class="floating-cube-mesh">
+                  <i id="showcase-inner-mesh" class="fa-solid fa-cube"></i>
+                </div>
+              </div>
+
+              <div class="showcase-cta-group" style="display: flex; gap: 12px; margin-top: auto; width: 100%;">
+                <a href="/services/3d-modeling" class="btn btn-secondary" id="showcase-learn-more"
+                  style="flex: 1; text-align: center; justify-content: center; padding: 12px 16px; font-size: 0.9rem; display: flex; align-items: center;">Learn More</a>
+                <a href="#contact" class="btn btn-primary" id="showcase-cta"
+                  style="flex: 1; text-align: center; justify-content: center; padding: 12px 16px; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">Discuss <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrolling Right List -->
+          <div class="services-scroll-list">
+            <!-- Item 1 -->
+            <div class="service-scroll-item active" data-service="modeling" data-title="3D Modeling"
+              data-desc="Production-ready high/low poly models optimized for web, gaming, and AR visualization."
+              data-icon="fa-shapes" data-mesh="fa-cube"
+              data-color="radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, transparent 70%)"
+              data-link="/services/3d-modeling">
+              <span class="service-num">01</span>
+              <h3>3D Modeling</h3>
+              <p>We create optimized 3D geometry for virtual worlds, AR viewers, and production pipelines. Our assets
+                load fast and preserve topological integrity.</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="service-scroll-item" data-service="rendering" data-title="3D Rendering"
+              data-desc="Photorealistic studio visual mockups, interior environments, and commercial rendering."
+              data-icon="fa-image" data-mesh="fa-images"
+              data-color="radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%)"
+              data-link="/services/3d-rendering">
+              <span class="service-num">02</span>
+              <h3>3D Rendering</h3>
+              <p>Translate blueprints and wireframes into stunning, photorealistic images. Perfect for marketing
+                campaigns, catalogs, and architectural reviews.</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="service-scroll-item" data-service="animation" data-title="3D Animation"
+              data-desc="Cinematic product explainer videos, mechanics assemblies, and interactive simulations."
+              data-icon="fa-play" data-mesh="fa-film"
+              data-color="radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%)"
+              data-link="/services/3d-animation">
+              <span class="service-num">03</span>
+              <h3>3D Animation</h3>
+              <p>Bring products to life with custom motion sequences. Ideal for instructional step-by-step guides,
+                explainer videos, and social media reels.</p>
+            </div>
+            <!-- Item 4 -->
+            <div class="service-scroll-item" data-service="ar" data-title="AR Experiences"
+              data-desc="WebXR and app-less retail augmented reality for web stores, furniture, and jewelry brands."
+              data-icon="fa-mobile-screen" data-mesh="fa-glasses"
+              data-color="radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%)"
+              data-link="/services/ar-experiences">
+              <span class="service-num">04</span>
+              <h3>AR Experiences</h3>
+              <p>Enable app-free Augmented Reality straight in standard mobile web browsers. Let users place furniture
+                in their rooms or wear accessories virtually.</p>
+            </div>
+            <!-- Item 5 -->
+            <div class="service-scroll-item" data-service="vr" data-title="VR Solutions"
+              data-desc="Fully immersive virtual reality training, design systems, and digital twin sandboxes."
+              data-icon="fa-vr-cardboard" data-mesh="fa-headset"
+              data-color="radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%)"
+              data-link="/services/vr-solutions">
+              <span class="service-num">05</span>
+              <h3>VR Solutions</h3>
+              <p>Develop bespoke virtual environments for safe worker training, digital showrooms, and high-fidelity
+                multiplayer design rooms.</p>
+            </div>
+            <!-- Item 6 -->
+            <div class="service-scroll-item" data-service="digitaltwin" data-title="Digital Twins"
+              data-desc="Physics-accurate real-world system, equipment, and facility digital replica systems."
+              data-icon="fa-clone" data-mesh="fa-server"
+              data-color="radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%)"
+              data-link="/services/digital-twins">
+              <span class="service-num">06</span>
+              <h3>Digital Twins</h3>
+              <p>Replicate actual warehouse layouts, plant operations, or engine structures. Feed real-time data to
+                preview statuses and trace operational warnings.</p>
+            </div>
+            <!-- Item 7 -->
+            <div class="service-scroll-item" data-service="showroom" data-title="Virtual Showrooms"
+              data-desc="Interactive web showrooms with customized product config systems and payment links."
+              data-icon="fa-store" data-mesh="fa-shop"
+              data-color="radial-gradient(circle, rgba(234, 179, 8, 0.25) 0%, transparent 70%)"
+              data-link="/services/virtual-showrooms">
+              <span class="service-num">07</span>
+              <h3>Virtual Showrooms</h3>
+              <p>Design multi-room digital shops where visitors rotate models, change fabrics or colors in real-time,
+                and checkout directly through APIs.</p>
+            </div>
+            <!-- Item 8 -->
+            <div class="service-scroll-item" data-service="gaming" data-title="Gaming Assets"
+              data-desc="AAA-grade textured characters, props, environments, and weapon configurations."
+              data-icon="fa-dragon" data-mesh="fa-shield-halved"
+              data-color="radial-gradient(circle, rgba(239, 68, 68, 0.25) 0%, transparent 70%)"
+              data-link="/services/gaming-assets">
+              <span class="service-num">08</span>
+              <h3>Gaming Assets</h3>
+              <p>Outsource gaming assets, characters, environmental props, and terrain layouts, complete with correct
+                topology mapping and PBR materials.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-subtitle">Drag the slider on each card to compare raw models with final renders, or inspect
+            custom web visualizations.</p>
+        </div>
+
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="furniture">Furniture</button>
+          <button class="filter-btn" data-filter="electronics">Electronics</button>
+          <button class="filter-btn" data-filter="automotive">Automotive</button>
+          <button class="filter-btn" data-filter="fashion">Fashion & Retail</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Project 1 -->
+          <div class="portfolio-card" data-category="furniture">
+            <div class="slider-container">
+              <div class="slider-img before" style="--bg-image: url('assets/furniture_chair.png');"></div>
+              <div class="slider-overlay">
+                <div class="slider-img after" style="background-image: url('assets/furniture_chair.png');"></div>
+              </div>
+              <div class="slider-handle">
+                <div class="slider-handle-button"><i class="fa-solid fa-arrows-left-right"></i></div>
+              </div>
+              <span class="slider-label before-label">Mesh Topology</span>
+              <span class="slider-label after-label">Studio Render</span>
+            </div>
+            <div class="portfolio-info">
+              <div>
+                <span class="portfolio-tag">Furniture</span>
+                <h4>Minimalist Accent Chair</h4>
+                <p>E-commerce photorealistic product rendering and topology configuration.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="portfolio-card" data-category="electronics">
+            <div class="slider-container">
+              <div class="slider-img before" style="--bg-image: url('assets/electronics_headset.png');"></div>
+              <div class="slider-overlay">
+                <div class="slider-img after" style="background-image: url('assets/electronics_headset.png');"></div>
+              </div>
+              <div class="slider-handle">
+                <div class="slider-handle-button"><i class="fa-solid fa-arrows-left-right"></i></div>
+              </div>
+              <span class="slider-label before-label">Mesh Topology</span>
+              <span class="slider-label after-label">Studio Render</span>
+            </div>
+            <div class="portfolio-info">
+              <div>
+                <span class="portfolio-tag">Electronics</span>
+                <h4>ANC Wireless Headset</h4>
+                <p>High-fidelity modeling, micro-texturing, and dynamic exploded-view animation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="portfolio-card" data-category="automotive">
+            <div class="slider-container">
+              <div class="slider-img before" style="--bg-image: url('assets/automotive_car.png');"></div>
+              <div class="slider-overlay">
+                <div class="slider-img after" style="background-image: url('assets/automotive_car.png');"></div>
+              </div>
+              <div class="slider-handle">
+                <div class="slider-handle-button"><i class="fa-solid fa-arrows-left-right"></i></div>
+              </div>
+              <span class="slider-label before-label">Mesh Topology</span>
+              <span class="slider-label after-label">Studio Render</span>
+            </div>
+            <div class="portfolio-info">
+              <div>
+                <span class="portfolio-tag">Automotive</span>
+                <h4>Electric Sports Concept</h4>
+                <p>Aerodynamic vehicle modeling and Unreal Engine physics integration simulation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="portfolio-card" data-category="fashion">
+            <div class="slider-container">
+              <div class="slider-img before" style="--bg-image: url('assets/fashion_boot.png');"></div>
+              <div class="slider-overlay">
+                <div class="slider-img after" style="background-image: url('assets/fashion_boot.png');"></div>
+              </div>
+              <div class="slider-handle">
+                <div class="slider-handle-button"><i class="fa-solid fa-arrows-left-right"></i></div>
+              </div>
+              <span class="slider-label before-label">Mesh Topology</span>
+              <span class="slider-label after-label">Studio Render</span>
+            </div>
+            <div class="portfolio-info">
+              <div>
+                <span class="portfolio-tag">Fashion & Retail</span>
+                <h4>Premium Leather Boot</h4>
+                <p>Textile scan modeling with interactive 3D WebXR viewing wrapper overlay.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="portfolio-card" data-category="furniture">
+            <div class="slider-container">
+              <div class="slider-img before" style="--bg-image: url('assets/furniture_table.png');"></div>
+              <div class="slider-overlay">
+                <div class="slider-img after" style="background-image: url('assets/furniture_table.png');"></div>
+              </div>
+              <div class="slider-handle">
+                <div class="slider-handle-button"><i class="fa-solid fa-arrows-left-right"></i></div>
+              </div>
+              <span class="slider-label before-label">Mesh Topology</span>
+              <span class="slider-label after-label">Studio Render</span>
+            </div>
+            <div class="portfolio-info">
+              <div>
+                <span class="portfolio-tag">Furniture</span>
+                <h4>Nordic Dining Table</h4>
+                <p>Woodgrain high-res modeling and parametric product customizer integration.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="portfolio-card" data-category="electronics">
+            <div class="slider-container">
+              <div class="slider-img before" style="--bg-image: url('assets/electronics_hub.png');"></div>
+              <div class="slider-overlay">
+                <div class="slider-img after" style="background-image: url('assets/electronics_hub.png');"></div>
+              </div>
+              <div class="slider-handle">
+                <div class="slider-handle-button"><i class="fa-solid fa-arrows-left-right"></i></div>
+              </div>
+              <span class="slider-label before-label">Mesh Topology</span>
+              <span class="slider-label after-label">Studio Render</span>
+            </div>
+            <div class="portfolio-info">
+              <div>
+                <span class="portfolio-tag">Electronics</span>
+                <h4>Smart Home Hub v2</h4>
+                <p>Mechanical assemblies rendering, plastic/glass shader setup and export.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="why-us">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Why Leading Brands Choose Us</h2>
+          <p class="section-subtitle">We merge AAA gaming-grade artists with optimized web technologies to deliver high
+            quality, fast.</p>
+        </div>
+        <div class="why-us-grid">
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h4>Rapid Turnaround</h4>
+            <p>Initial design draft variants and setups delivered within 48–72 hours.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-users-gear"></i></div>
+            <h4>Dedicated Experts</h4>
+            <p>A dedicated Project Manager and technical lead assigned to your account.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-rotate-left"></i></div>
+            <h4>Flexible Iterations</h4>
+            <p>Iterative review updates and adaptations until details align perfectly.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h4>AAA Production</h4>
+            <p>Industry standard textures, correct lighting, and optimized file sizes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Our Proven Process</h2>
+          <p class="section-subtitle">From absolute concept modeling up to high-fidelity web integrations in five simple
+            steps.</p>
+        </div>
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">Step 01</span>
+              <h4>Discovery & Intake</h4>
+              <p>We analyze blueprints, reference photos, sizing sheets, or CAD files to define the modeling targets,
+                lighting style, and export formats.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">Step 02</span>
+              <h4>Topology & Geometry</h4>
+              <p>Our modeling team builds the mesh geometry. We optimize poly counts so assets load lightning-fast on
+                mobile browsers or web stores.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">Step 03</span>
+              <h4>Material & Shader Design</h4>
+              <p>We texture models using PBR (Physically Based Rendering) standards, configuring leather grain, brushed
+                metals, glass refractivity, and light bounces.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">Step 04</span>
+              <h4>High-Fidelity QA Check</h4>
+              <p>Every rendering passes through multi-tier review, checking against source materials for sizing
+                precision and pixel-perfect lighting setups.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">Step 05</span>
+              <h4>Final Handoff & Launch</h4>
+              <p>Assets are delivered in requested formats (.glb, .usdz, .obj, high-res PNG, MP4 loop) along with
+                ready-to-paste embed codes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI ESTIMATOR / CALCULATOR SECTION -->
+    <section id="calculator">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Interactive Estimator</h2>
+          <p class="section-subtitle">Select your targets below to receive a real-time price and timeline estimation
+            instantly.</p>
+        </div>
+        <div class="calc-container">
+          <div class="calc-options">
+            <div>
+              <span class="calc-group-title">Select Service Type</span>
+              <div class="calc-grid" id="calc-service-grid">
+                <button class="calc-option-btn active" data-value="modeling" data-base="150" data-time="2">
+                  <i class="fa-solid fa-shapes"></i>
+                  <span>3D Modeling</span>
+                </button>
+                <button class="calc-option-btn" data-value="rendering" data-base="250" data-time="3">
+                  <i class="fa-solid fa-image"></i>
+                  <span>3D Rendering</span>
+                </button>
+                <button class="calc-option-btn" data-value="animation" data-base="600" data-time="5">
+                  <i class="fa-solid fa-play"></i>
+                  <span>3D Animation</span>
+                </button>
+                <button class="calc-option-btn" data-value="ar" data-base="400" data-time="4">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  <span>AR Experience</span>
+                </button>
+                <button class="calc-option-btn" data-value="showroom" data-base="1200" data-time="8">
+                  <i class="fa-solid fa-store"></i>
+                  <span>Virtual Showroom</span>
+                </button>
+                <button class="calc-option-btn" data-value="digitaltwin" data-base="2000" data-time="12">
+                  <i class="fa-solid fa-clone"></i>
+                  <span>Digital Twin</span>
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <span class="calc-group-title">Complexity Level</span>
+              <div class="calc-grid" id="calc-complexity-grid">
+                <button class="calc-option-btn active" data-value="basic" data-mult="1.0" data-time-add="0">
+                  <i class="fa-solid fa-cubes"></i>
+                  <span>Basic / Low-Poly</span>
+                </button>
+                <button class="calc-option-btn" data-value="medium" data-mult="1.5" data-time-add="2">
+                  <i class="fa-solid fa-cube"></i>
+                  <span>Medium Detail</span>
+                </button>
+                <button class="calc-option-btn" data-value="advanced" data-mult="2.2" data-time-add="4">
+                  <i class="fa-solid fa-gem"></i>
+                  <span>AAA / Photoreal</span>
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="calc-group-title">Asset Quantity</span>
+                <span id="qty-badge" style="color: var(--accent-color); font-weight: 700;">1 Asset</span>
+              </div>
+              <div class="range-slider-wrapper">
+                <input type="range" class="range-slider" id="calc-qty-slider" min="1" max="50" value="1">
+                <div class="range-labels">
+                  <span>1</span>
+                  <span>10</span>
+                  <span>25</span>
+                  <span>50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-results-card">
+            <div class="calc-result-header">
+              <h4>Estimated Investment</h4>
+              <div class="calc-price-display">
+                <span>$</span><span id="calc-price-val">150</span>
+              </div>
+            </div>
+            <div class="calc-metrics-grid">
+              <div class="calc-metric">
+                <h5>Timeline Estimate</h5>
+                <p id="calc-time-val">2 Days</p>
+              </div>
+              <div class="calc-metric">
+                <h5>Unit Cost</h5>
+                <p id="calc-unit-val">$150</p>
+              </div>
+            </div>
+            <div>
+              <p style="font-size: 0.8rem; margin-bottom: 24px; color: var(--text-muted);">Estimates do not include
+                custom platform API builds or multi-asset discount bundles. Full quotation is computed on consultation.
+              </p>
+              <a href="#contact" class="btn btn-primary" style="width: 100%;">Claim Free Mock Render</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES SECTION -->
+    <section id="industries">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Industries We Serve</h2>
+          <p class="section-subtitle">Delivering high fidelity models tailored for specific pipeline integrations.</p>
+        </div>
+        <div class="industries-grid">
+          <div class="industry-card"><i class="fa-solid fa-cart-shopping"></i>
+            <h4>E-Commerce</h4>
+          </div>
+          <div class="industry-card"><i class="fa-solid fa-couch"></i>
+            <h4>Furniture</h4>
+          </div>
+          <div class="industry-card"><i class="fa-solid fa-industry"></i>
+            <h4>Manufacturing</h4>
+          </div>
+          <div class="industry-card"><i class="fa-solid fa-sign-hanging"></i>
+            <h4>Real Estate</h4>
+          </div>
+          <div class="industry-card"><i class="fa-solid fa-compass-drafting"></i>
+            <h4>Architecture</h4>
+          </div>
+          <div class="industry-card"><i class="fa-solid fa-car-side"></i>
+            <h4>Automotive</h4>
+          </div>
+          <div class="industry-card"><i class="fa-solid fa-heart-pulse"></i>
+            <h4>Healthcare</h4>
+          </div>
+          <div class="industry-card"><i class="fa-solid fa-gamepad"></i>
+            <h4>Gaming</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section id="stats">
+      <div class="container stats-grid">
+      <div class="stat-card">
+          <h3 class="stat-num" data-target="250000" data-suffix="+">0</h3>
+          <p>Assets Delivered</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-num" data-target="800" data-suffix="+">0</h3>
+          <p>Successful Projects</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-num" data-target="50" data-suffix="+">0</h3>
+          <p>Countries Served</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-num" data-target="98" data-suffix="%">0</h3>
+          <p>% Client Satisfaction</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">What Our Clients Say</h2>
+          <p class="section-subtitle">Real feedback from innovative brands using immersive visual asset solutions.</p>
+        </div>
+        <div class="testimonials-wrapper">
+          <div class="testimonials-track" id="testimonials-track">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">"Embedding the interactive 3D WebXR asset directly onto our Shopify store
+                raised our product conversions by 43% and reduced product return requests by 28%. The process was
+                completely hands-off."</p>
+              <div class="testimonial-author">
+                <h5>Sarah Jenkins</h5>
+                <p>VP of E-commerce, Aura Designs</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">"We needed over 120 furniture assets textured and rendered within two weeks.
+                Vertex XR not only delivered them ahead of schedule but also handled direct file optimization for our
+                WebAR widget."</p>
+              <div class="testimonial-author">
+                <h5>Michael Chen</h5>
+                <p>Chief Product Architect, Loft Concepts</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">"Their digital twin replication pipeline allowed our service engineers to
+                train in a virtual layout, slashing machine down times by 35%. The level of photorealism is unmatched."
+              </p>
+              <div class="testimonial-author">
+                <h5>Devon Brooks</h5>
+                <p>VP Operations, CoreFlow Industrial</p>
+              </div>
+            </div>
+          </div>
+          <!-- Navigation Arrows -->
+          <button class="carousel-nav-btn prev" id="carousel-prev" aria-label="Previous slide"><i
+              class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-nav-btn next" id="carousel-next" aria-label="Next slide"><i
+              class="fa-solid fa-chevron-right"></i></button>
+          <!-- Navigation Dots -->
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS SECTION -->
+    <section id="faqs">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Answers to common inquiries regarding project kickoffs, software models, and
+            pricing details.</p>
+        </div>
+        <div class="faq-list">
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>How long does a standard 3D modeling project take?</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                A simple product model typically takes 2-3 days, while complex machinery or animations can take 5-10
+                business days. We provide clear, guaranteed delivery dates prior to project kickoff.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Do you build native AR/VR applications?</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Yes! We develop both web-based AR/VR solutions (WebXR) that load directly in standard browser pages and
+                native mobile applications (iOS and Android) using Unity and Unreal Engine.
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Can you integrate models directly with Shopify/WooCommerce?</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Absolutely. We export assets in fully optimized `.glb` and `.usdz` formats, which are natively supported
+                by Shopify, WooCommerce, and other e-commerce platforms for instant 3D and WebAR viewing.
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>What assets or specifications do you need to get started?</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                We can work with reference photos, hand sketches, CAD drawings, blueprints, or physical products. The
+                more details you provide regarding dimensions and textures, the faster we can produce exact replicas.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD GENERATION & CONTACT FORM -->
+    <section id="contact">
+      <div class="container contact-container">
+        <div class="contact-info">
+          <div>
+            <span class="hero-badge" style="margin-bottom: 12px; display: inline-flex;"><i
+                class="fa-solid fa-envelope"></i> Get In Touch</span>
+            <h3>Ready To Build Your Next 3D Experience?</h3>
+            <p>Let's map out your assets, optimize your workflows, and build high-performance 3D solutions. Claim your
+              first free mock render today.</p>
+          </div>
+
+          <div class="contact-methods">
+            <div class="contact-method-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-method-content">
+                <h5>Email Enquiry</h5>
+                <p>hello@vertexxr.com</p>
+              </div>
+            </div>
+            <div class="contact-method-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-method-content">
+                <h5>Direct Phone</h5>
+                <p>+1 (800) 555-3D-XR</p>
+              </div>
+            </div>
+            <div class="contact-method-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-method-content">
+                <h5>HQ Location</h5>
+                <p>San Francisco, CA & London, UK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form" action="#" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Work Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="john@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="form-company">Company</label>
+                <input type="text" id="form-company" class="form-input" placeholder="e.g. Acme Corp">
+              </div>
+              <div class="form-group">
+                <label for="form-service">Required Service</label>
+                <select id="form-service" class="form-input" style="background-color: #0f172a;">
+                  <option value="modeling">3D Modeling</option>
+                  <option value="rendering">3D Rendering</option>
+                  <option value="animation">3D Animation</option>
+                  <option value="ar">AR/VR Experience</option>
+                  <option value="other">Custom System Integration</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="form-message">Project Description</label>
+                <textarea id="form-message" class="form-input form-textarea"
+                  placeholder="Tell us about the assets or experiences you wish to build..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Get Free Consultation</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+          </a>
+          <p>Merging premium 3D modeling, photorealistic rendering, and app-less retail WebAR experiences to drive
+            business results.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">3D Modeling</a></li>
+            <li><a href="#services">Product Rendering</a></li>
+            <li><a href="#services">3D Animations</a></li>
+            <li><a href="#services">AR / VR Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="#industries">E-Commerce</a></li>
+            <li><a href="#industries">Furniture Manufacturing</a></li>
+            <li><a href="#industries">Real Estate Visualization</a></li>
+            <li><a href="#industries">Industrial Digital Twins</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#portfolio">Our Work</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#contact">Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vertex XR. All rights reserved. Built with Antigravity.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EXIT INTENT OVERLAY POPUP -->
+  <div class="exit-popup-overlay" id="exit-popup">
+    <div class="exit-popup-card">
+      <button class="exit-popup-close" id="exit-popup-close" aria-label="Close popup">&times;</button>
+      <div class="exit-popup-icon">
+        <i class="fa-solid fa-gift"></i>
+      </div>
+      <h3>Claim a Free Sample Render</h3>
+      <p>Before you go, let us show you what we can do. Send us a photo or CAD file, and we will send you a
+        high-resolution photorealistic 3D render, absolutely free.</p>
+      <a href="#contact" class="btn btn-primary" id="claim-sample-btn">Claim Free Render</a>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP CHAT BUTTON -->
+  <a href="https://wa.me/15553378423" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Chat with an Expert</span>
+  </a>
+
+  <!-- Three.js Library (r134 — confirmed available on cdnjs) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Main Script -->
+  <script src="app.js"></script>
+</body>
+
+</html>

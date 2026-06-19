@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VR Solutions | Vertex XR</title>
+  <meta name="description"
+    content="Fully immersive virtual reality training, multiplayer design systems, and digital twin sandboxes. Cross-platform headset support.">
+  <meta name="keywords"
+    content="virtual reality, vr training, multiplayer vr, quest 3, vision pro, webxr vr">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="/style.css?v=5">
+  <link rel="stylesheet" href="/services/services.css">
+
+  <!-- CDNs: FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-service="vr">
+
+  <!-- Background Glow Elements -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="/#" class="logo">
+        <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="/#" class="nav-link">Home</a></li>
+        <li><a href="/#services" class="nav-link active">Services</a></li>
+        <li><a href="/#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="/#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="/#process" class="nav-link">Process</a></li>
+        <li><a href="/#calculator" class="nav-link">AI Calculator</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main style="margin-top: 80px;">
+    <!-- HERO SECTION -->
+    <section id="hero" style="padding: 60px 0;">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-vr-cardboard"></i> Immersive Simulators
+          </div>
+          <h1 class="hero-title">Custom Business <span class="text-gradient">VR Solutions</span></h1>
+          <p class="hero-description">Develop bespoke virtual environments for industrial safety training, collaborative spatial architecture design, and interactive multiplayer brand showrooms.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">Start VR Project</a>
+            <a href="/#portfolio" class="btn btn-secondary">Explore Demo</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <h4>90%</h4>
+              <p>Training Cost Savings</p>
+            </div>
+            <div class="metric-item">
+              <h4>Multi</h4>
+              <p>Player Support</p>
+            </div>
+            <div class="metric-item">
+              <h4>Vision Pro</h4>
+              <p>&amp; Quest Compatible</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual-wrapper">
+          <div class="canvas-container" id="canvas-container"></div>
+          <div class="viewer-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Drag to rotate, scroll to zoom
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS SECTION -->
+    <section class="what-is-section">
+      <div class="container">
+        <div class="what-is-card">
+          <div class="what-is-visual">
+            <div class="what-is-visual-glow" style="background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);"></div>
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="what-is-content">
+            <h2>What is VR Solutions?</h2>
+            <p>Virtual Reality (VR) immerses users in complete, digitally-constructed environments. By simulating actual scales and hand interactions, VR enables users to practice hazard management, walk through pre-construction structures, and experience spatial depth naturally.</p>
+            <p>At Vertex XR, we build custom VR applications using Unity, Unreal, and WebXR technologies. We focus on low-latency interactions, multi-user sync, and realistic physics response to make training scenarios transfer directly to real-world execution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES SECTION -->
+    <section id="capabilities" style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">VR Capabilities</h2>
+          <p class="section-subtitle">High-fidelity virtual reality experiences engineered for training, design, and retail.</p>
+        </div>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Industrial Safety Training</h4>
+            <p>Safe, repeatable simulator modules for factories, laboratories, and high-voltage grid repairs.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-users-gear"></i></div>
+            <h4>Multiplayer Collab Rooms</h4>
+            <p>Gather global architecture or engineering teams to inspect, scale, and alter blueprints together in real-time.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-person-shelter"></i></div>
+            <h4>Virtual Real Estate Staging</h4>
+            <p>Take buyers or investors on realistic spatial walks through planned buildings before foundations are laid.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-display"></i></div>
+            <h4>Cross-Platform Support</h4>
+            <p>Engineered to compile natively for Meta Quest, Apple Vision Pro, HTC Vive, and WebXR browsers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE BLOCKS (ALTERNATING) -->
+    <section class="feature-blocks">
+      <div class="container">
+        <!-- Block 1 -->
+        <div class="feature-block">
+          <div class="feature-block-content">
+            <h3>Physics-Accurate Object Grab</h3>
+            <p>We configure natural hand-tracking limits, item collision boundaries, and gravity weights. When users operate machinery or pull switches, the headset replicates realistic spatial feedback for muscle-memory training.</p>
+          </div>
+          <div class="feature-block-image">
+            <i class="fa-solid fa-hand"></i>
+          </div>
+        </div>
+        <!-- Block 2 -->
+        <div class="feature-block reverse">
+          <div class="feature-block-image">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <div class="feature-block-content">
+            <h3>Unified Training Analytics</h3>
+            <p>Measure and optimize. Our VR platforms integrate tracking dashboards that log user decision times, step sequences, safety mistakes, and tool alignment accuracy directly to a centralized admin database.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common questions regarding virtual reality integrations and hardware support.</p>
+        </div>
+        <div class="faq-accordion-container">
+          <div class="faq-item">
+            <button class="faq-question">Which virtual reality headsets do you support? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>We build VR projects compiled for standalone headsets (Meta Quest 2/3/Pro), high-end tethered systems (HTC Vive, Valve Index), Apple Vision Pro, and standard desktop screens via browser-based WebXR.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How long does a custom VR solution take to build? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>A standard interactive training scene or architectural walkthrough takes between 3 to 6 weeks, depending on asset availability, coding interaction mechanics, and target optimization testing.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do users need high-end gaming PCs? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>No. We optimize stand-alone applications (.APK files) to run natively on mobile processor headsets like Meta Quest, removing PC requirements. Desktop WebXR runs smoothly on standard business machines.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can we integrate our own 3D CAD files? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>Yes. We decimate and optimize your industrial CAD parts, rigging active joints and mapping PBR materials so they match actual equipment and behave realistically in training scenes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" style="padding: 60px 0; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Discuss Your Project</h2>
+          <p class="section-subtitle">Boost learning retention and design speed. Connect with our VR developers.</p>
+        </div>
+        <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start; max-width: 900px; margin: 0 auto;">
+          <div class="contact-info">
+            <div class="contact-method-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="contact-icon" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h5 style="font-size: 1.1rem; margin-bottom: 4px;">Email Support</h5>
+                <p style="font-size: 0.95rem;">hello@vertexxr.com</p>
+              </div>
+            </div>
+            <div class="contact-method-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="contact-icon" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h5 style="font-size: 1.1rem; margin-bottom: 4px;">Phone</h5>
+                <p style="font-size: 0.95rem;">+1 (800) 555-3D-XR</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-card" style="background: var(--surface-trans); padding: 32px; border: 1px solid var(--border-light); border-radius: 16px; backdrop-filter: blur(16px);">
+            <form id="contact-form">
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Name</label>
+                <input type="text" id="name" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="John Doe" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Work Email</label>
+                <input type="email" id="email" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="john@company.com" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="company" style="display: block; margin-bottom: 8px; font-weight: 500;">Company</label>
+                <input type="text" id="company" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="Acme Corp">
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="service-select" style="display: block; margin-bottom: 8px; font-weight: 500;">Service Needed</label>
+                <select id="service-select" class="form-input" style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid var(--border-light); border-radius: 8px; color: #fff;">
+                  <option value="modeling">3D Modeling</option>
+                  <option value="rendering">3D Rendering</option>
+                  <option value="animation">3D Animation</option>
+                  <option value="ar">AR Experiences</option>
+                  <option value="vr">VR Solutions</option>
+                  <option value="digitaltwin">Digital Twins</option>
+                  <option value="showroom">Virtual Showrooms</option>
+                  <option value="gaming">Gaming Assets</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 24px;">
+                <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Project Message</label>
+                <textarea id="message" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff; height: 120px;" placeholder="Describe the training scenario, showroom, or review space you wish to build..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/#" class="logo">
+            <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+          </a>
+          <p>Merging premium 3D modeling, photorealistic rendering, and app-less retail WebAR experiences to drive business results.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/3d-modeling">3D Modeling</a></li>
+            <li><a href="/services/3d-rendering">Product Rendering</a></li>
+            <li><a href="/services/3d-animation">3D Animations</a></li>
+            <li><a href="/services/ar-experiences">AR / VR Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="/#">E-Commerce</a></li>
+            <li><a href="/#">Furniture Manufacturing</a></li>
+            <li><a href="/#">Real Estate Visualization</a></li>
+            <li><a href="/#">Industrial Digital Twins</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/#portfolio">Our Work</a></li>
+            <li><a href="/#why-us">Why Choose Us</a></li>
+            <li><a href="/#process">Our Process</a></li>
+            <li><a href="/#contact">Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vertex XR. All rights reserved. Built with Antigravity.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Services Script -->
+  <script src="/services/services.js"></script>
+</body>
+
+</html>

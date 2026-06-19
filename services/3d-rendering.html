@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Rendering Services | Vertex XR</title>
+  <meta name="description"
+    content="Photorealistic studio product visual mockups, interior environments, and commercial rendering. Real-world material matching and light path-tracing.">
+  <meta name="keywords"
+    content="3d rendering, product rendering, architectural rendering, interior staging, lighting simulations">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="/style.css?v=5">
+  <link rel="stylesheet" href="/services/services.css">
+
+  <!-- CDNs: FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-service="rendering">
+
+  <!-- Background Glow Elements -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="/#" class="logo">
+        <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="/#" class="nav-link">Home</a></li>
+        <li><a href="/#services" class="nav-link active">Services</a></li>
+        <li><a href="/#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="/#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="/#process" class="nav-link">Process</a></li>
+        <li><a href="/#calculator" class="nav-link">AI Calculator</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main style="margin-top: 80px;">
+    <!-- HERO SECTION -->
+    <section id="hero" style="padding: 60px 0;">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-image"></i> Photorealistic CGI
+          </div>
+          <h1 class="hero-title">Studio Quality <span class="text-gradient">3D Product Rendering</span></h1>
+          <p class="hero-description">Translate product designs and architectural plans into stunning, physics-accurate imagery. Replicate complex materials, fabrics, and studio lighting without camera rentals.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">Start Rendering Project</a>
+            <a href="/#portfolio" class="btn btn-secondary">Explore Work</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <h4>4K / 8K</h4>
+              <p>Ultra-HD Exports</p>
+            </div>
+            <div class="metric-item">
+              <h4>99.9%</h4>
+              <p>Ray-Traced Realism</p>
+            </div>
+            <div class="metric-item">
+              <h4>Zero</h4>
+              <p>Shipping Costs</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual-wrapper">
+          <div class="canvas-container" id="canvas-container"></div>
+          <div class="viewer-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Drag to rotate, scroll to zoom
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS SECTION -->
+    <section class="what-is-section">
+      <div class="container">
+        <div class="what-is-card">
+          <div class="what-is-visual">
+            <div class="what-is-visual-glow" style="background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);"></div>
+            <i class="fa-solid fa-image"></i>
+          </div>
+          <div class="what-is-content">
+            <h2>What is 3D Rendering?</h2>
+            <p>3D rendering is the computer-graphics process of converting 3D wireframe models into high-fidelity 2D images. Acting as a virtual camera, rendering calculates lighting angles, physical material specs, and lens apertures to output photorealistic visuals for commercial use.</p>
+            <p>At Vertex XR, our rendering pipeline simulates real-world path-tracing. This matches the exact ways that photons bounce off brushed metals, leather fibers, matte plastics, and glossy surfaces, creating depth-of-field and organic shadow roll-offs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES SECTION -->
+    <section id="capabilities" style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Rendering Capabilities</h2>
+          <p class="section-subtitle">Stunning visuals built across a wide range of marketing and design use cases.</p>
+        </div>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-cube"></i></div>
+            <h4>Studio Product Shots</h4>
+            <p>High-resolution marketing assets with clean white or custom backdrops. Perfect for e-commerce store listings.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-couch"></i></div>
+            <h4>Interior Visual Staging</h4>
+            <p>Recreate living rooms, office designs, or kitchen styles. Arrange textures and staging elements accurately.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-building"></i></div>
+            <h4>Exterior Architectural Renders</h4>
+            <p>Simulate architectural environments, natural lighting at golden hour, landscapes, and construction material layouts.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-toggle-on"></i></div>
+            <h4>Dynamic Swatch Configs</h4>
+            <p>Generate matching sets of rendering layers showing material swaps, wood stain changes, or metal variants.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE BLOCKS (ALTERNATING) -->
+    <section class="feature-blocks">
+      <div class="container">
+        <!-- Block 1 -->
+        <div class="feature-block">
+          <div class="feature-block-content">
+            <h3>Light Path-Tracing Calculations</h3>
+            <p>Our render farms calculate true physical light paths. We resolve complex light scatterings, soft ambient occlusions, secondary bounces, and specular caustics so materials look organic and tactile, avoiding flat artificial CGI styles.</p>
+          </div>
+          <div class="feature-block-image">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+        </div>
+        <!-- Block 2 -->
+        <div class="feature-block reverse">
+          <div class="feature-block-image">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <div class="feature-block-content">
+            <h3>Unlimited Photography Settings</h3>
+            <p>Say goodbye to shipping prototypes, setting up studios, and rescheduling shoots due to bad weather. Place your virtual product in an infinite variety of sets—from a minimalist concrete loft to a bright sunny park—in seconds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common questions regarding our high-fidelity product rendering workflows.</p>
+        </div>
+        <div class="faq-accordion-container">
+          <div class="faq-item">
+            <button class="faq-question">What input materials are required to start? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>We can start from 3D models you already have (OBJ, FBX, STEP), dimension blueprints, photos of physical prototypes, or material fabric references. We build whatever you lack.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How long does a typical rendering take? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>Standard product renders take 3 to 5 business days. Multi-room interior staging or architectural complexes take 6 to 10 days depending on texture and lighting complexity.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I get high-resolution formats for print? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>Yes. We render at 4K (3840x2160px) by default. If you need output for large format print media, banners, or packaging, we can output in 8K or higher resolutions.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How are revisions managed? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>We provide two revision rounds. In the first round, you review camera angles and clay/lighting tests. In the second round, we verify material placements and texture colors prior to the final master export.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" style="padding: 60px 0; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Discuss Your Project</h2>
+          <p class="section-subtitle">Pre-visualize your catalog before launch. Speak with our CGI experts today.</p>
+        </div>
+        <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start; max-width: 900px; margin: 0 auto;">
+          <div class="contact-info">
+            <div class="contact-method-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="contact-icon" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h5 style="font-size: 1.1rem; margin-bottom: 4px;">Email Support</h5>
+                <p style="font-size: 0.95rem;">hello@vertexxr.com</p>
+              </div>
+            </div>
+            <div class="contact-method-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="contact-icon" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h5 style="font-size: 1.1rem; margin-bottom: 4px;">Phone</h5>
+                <p style="font-size: 0.95rem;">+1 (800) 555-3D-XR</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-card" style="background: var(--surface-trans); padding: 32px; border: 1px solid var(--border-light); border-radius: 16px; backdrop-filter: blur(16px);">
+            <form id="contact-form">
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Name</label>
+                <input type="text" id="name" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="John Doe" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Work Email</label>
+                <input type="email" id="email" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="john@company.com" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="company" style="display: block; margin-bottom: 8px; font-weight: 500;">Company</label>
+                <input type="text" id="company" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="Acme Corp">
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="service-select" style="display: block; margin-bottom: 8px; font-weight: 500;">Service Needed</label>
+                <select id="service-select" class="form-input" style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid var(--border-light); border-radius: 8px; color: #fff;">
+                  <option value="modeling">3D Modeling</option>
+                  <option value="rendering">3D Rendering</option>
+                  <option value="animation">3D Animation</option>
+                  <option value="ar">AR Experiences</option>
+                  <option value="vr">VR Solutions</option>
+                  <option value="digitaltwin">Digital Twins</option>
+                  <option value="showroom">Virtual Showrooms</option>
+                  <option value="gaming">Gaming Assets</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 24px;">
+                <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Project Message</label>
+                <textarea id="message" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff; height: 120px;" placeholder="Tell us about the renderings you wish to create..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/#" class="logo">
+            <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+          </a>
+          <p>Merging premium 3D modeling, photorealistic rendering, and app-less retail WebAR experiences to drive business results.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/3d-modeling">3D Modeling</a></li>
+            <li><a href="/services/3d-rendering">Product Rendering</a></li>
+            <li><a href="/services/3d-animation">3D Animations</a></li>
+            <li><a href="/services/ar-experiences">AR / VR Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="/#">E-Commerce</a></li>
+            <li><a href="/#">Furniture Manufacturing</a></li>
+            <li><a href="/#">Real Estate Visualization</a></li>
+            <li><a href="/#">Industrial Digital Twins</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/#portfolio">Our Work</a></li>
+            <li><a href="/#why-us">Why Choose Us</a></li>
+            <li><a href="/#process">Our Process</a></li>
+            <li><a href="/#contact">Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vertex XR. All rights reserved. Built with Antigravity.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Services Script -->
+  <script src="/services/services.js"></script>
+</body>
+
+</html>

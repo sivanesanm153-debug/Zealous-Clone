@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Databases
+db/
+*.db
+
+# Environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE & Brain system files
+.gemini/
+.system_generated/
+*.log

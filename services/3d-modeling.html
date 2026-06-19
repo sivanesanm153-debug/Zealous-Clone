@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Modeling Services | Vertex XR</title>
+  <meta name="description"
+    content="Production-ready high/low poly models optimized for web, gaming, and AR visualization. Direct CAD conversions and PBR texturing.">
+  <meta name="keywords"
+    content="3d modeling, cad conversion, asset optimization, pbr texturing, fbx, gltf, usdz">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="/style.css?v=5">
+  <link rel="stylesheet" href="/services/services.css">
+
+  <!-- CDNs: FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-service="modeling">
+
+  <!-- Background Glow Elements -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="/#" class="logo">
+        <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="/#" class="nav-link">Home</a></li>
+        <li><a href="/#services" class="nav-link active">Services</a></li>
+        <li><a href="/#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="/#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="/#process" class="nav-link">Process</a></li>
+        <li><a href="/#calculator" class="nav-link">AI Calculator</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main style="margin-top: 80px;">
+    <!-- HERO SECTION -->
+    <section id="hero" style="padding: 60px 0;">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-shapes"></i> High-Fidelity 3D Assets
+          </div>
+          <h1 class="hero-title">Optimize Pipelines With <span class="text-gradient">Production-Ready Models</span></h1>
+          <p class="hero-description">We develop topology-clean, PBR-textured, and low-poly optimized 3D assets designed to load in milliseconds on mobile WebAR and desktop interactive visualizers.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">Start Modeling Project</a>
+            <a href="/#portfolio" class="btn btn-secondary">See Showcase</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <h4>&lt;3MB</h4>
+              <p>Average File Size</p>
+            </div>
+            <div class="metric-item">
+              <h4>100%</h4>
+              <p>CAD Accuracy</p>
+            </div>
+            <div class="metric-item">
+              <h4>Quad-Only</h4>
+              <p>Clean Topology</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual-wrapper">
+          <div class="canvas-container" id="canvas-container"></div>
+          <div class="viewer-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Drag to rotate, scroll to zoom
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS SECTION -->
+    <section class="what-is-section">
+      <div class="container">
+        <div class="what-is-card">
+          <div class="what-is-visual">
+            <div class="what-is-visual-glow" style="background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);"></div>
+            <i class="fa-solid fa-cube"></i>
+          </div>
+          <div class="what-is-content">
+            <h2>What is 3D Modeling?</h2>
+            <p>3D modeling is the process of developing a mathematical representation of any three-dimensional surface of an object. In modern e-commerce and interactive spaces, it is the foundation of every immersive experience. By translating product dimensions, CAD files, or physical references into perfect digital geometry, it lets clients inspect products from every angle.</p>
+            <p>At Vertex XR, we specialize in high-quality 3D asset pipelines. We ensure clean edge-loops, lightweight file sizes (under 3MB for WebGL), and physics-based rendering (PBR) textures that look identical to physical items in real-world lighting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES SECTION -->
+    <section id="capabilities" style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Modeling Capabilities</h2>
+          <p class="section-subtitle">We cover the entire asset lifecycle from raw CAD conversion to real-time mobile visualizer deployment.</p>
+        </div>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-shapes"></i></div>
+            <h4>Hard Surface Modeling</h4>
+            <p>Highly precise, mathematical geometry built for electronics, furniture, automotive, and industrial machinery.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-person-running"></i></div>
+            <h4>Organic Sculpting</h4>
+            <p>High-polygon detail capturing organic structures, clothing folds, footwear textures, and stylized brand assets.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h4>Web & AR Optimization</h4>
+            <p>Polygon reduction, mesh decimation, and Draco/KTX2 texture compression to load assets in under 2 seconds on mobile.</p>
+          </div>
+          <div class="capability-card">
+            <div class="capability-icon"><i class="fa-solid fa-file-export"></i></div>
+            <h4>CAD to Web Conversion</h4>
+            <p>Direct conversion of engineering files (STEP, IGES, SolidWorks, Rhino) to web-friendly formats without losing details.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE BLOCKS (ALTERNATING) -->
+    <section class="feature-blocks">
+      <div class="container">
+        <!-- Block 1 -->
+        <div class="feature-block">
+          <div class="feature-block-content">
+            <h3>Physics-Based Rendering (PBR) Textures</h3>
+            <p>We map real-world materials (metals, glass, leathers, fabrics) onto 3D meshes using industry-standard roughness, metalness, and normal maps. This creates physical tactile depth and lets the surface react dynamically to change in scene lighting.</p>
+          </div>
+          <div class="feature-block-image">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+        </div>
+        <!-- Block 2 -->
+        <div class="feature-block reverse">
+          <div class="feature-block-image">
+            <i class="fa-solid fa-compress"></i>
+          </div>
+          <div class="feature-block-content">
+            <h3>Draco Compression for Fast Loads</h3>
+            <p>No user wants to wait for a 50MB model. We utilize Google Draco and glTF-pipeline algorithms to compress geometries and textures down to less than 2MB, reducing loading latency on mobile browsers while retaining 98% of the visual detail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common questions regarding our 3D asset modeling pipelines.</p>
+        </div>
+        <div class="faq-accordion-container">
+          <div class="faq-item">
+            <button class="faq-question">What file inputs do you accept? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>We can work from high-quality reference photos, product dimension sheets, blueprints, or raw CAD files (STEP, IGES, SolidWorks, Rhino, OBJ, FBX, etc.).</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What file formats will I receive? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>By default, we deliver .GLB/.gLTF for web visualizers and engines, along with .USDZ files optimized for Apple iOS Quick Look, and high-res source files (.FBX or .OBJ) upon request.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How long does a model take to create? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>A single standard e-commerce product asset takes between 2 to 4 business days. Bulk orders are processed via parallel pipelines and follow a custom batch schedule.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you include textures and materials? <i class="fa-solid fa-chevron-down faq-icon-toggle"></i></button>
+            <div class="faq-answer">
+              <p>Yes. All of our models include complete 4K or 2K PBR texture sets (Diffuse, Normal, Roughness, Metalness, Ambient Occlusion) tailored to your physical product specification sheets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" style="padding: 60px 0; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Discuss Your Project</h2>
+          <p class="section-subtitle">Send us your reference images or CAD file, and let's bring your products into the 3D space.</p>
+        </div>
+        <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start; max-width: 900px; margin: 0 auto;">
+          <div class="contact-info">
+            <div class="contact-method-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="contact-icon" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h5 style="font-size: 1.1rem; margin-bottom: 4px;">Email Support</h5>
+                <p style="font-size: 0.95rem;">hello@vertexxr.com</p>
+              </div>
+            </div>
+            <div class="contact-method-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="contact-icon" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h5 style="font-size: 1.1rem; margin-bottom: 4px;">Phone</h5>
+                <p style="font-size: 0.95rem;">+1 (800) 555-3D-XR</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-card" style="background: var(--surface-trans); padding: 32px; border: 1px solid var(--border-light); border-radius: 16px; backdrop-filter: blur(16px);">
+            <form id="contact-form">
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Name</label>
+                <input type="text" id="name" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="John Doe" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Work Email</label>
+                <input type="email" id="email" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="john@company.com" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="company" style="display: block; margin-bottom: 8px; font-weight: 500;">Company</label>
+                <input type="text" id="company" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff;" placeholder="Acme Corp">
+              </div>
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="service-select" style="display: block; margin-bottom: 8px; font-weight: 500;">Service Needed</label>
+                <select id="service-select" class="form-input" style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid var(--border-light); border-radius: 8px; color: #fff;">
+                  <option value="modeling">3D Modeling</option>
+                  <option value="rendering">3D Rendering</option>
+                  <option value="animation">3D Animation</option>
+                  <option value="ar">AR Experiences</option>
+                  <option value="vr">VR Solutions</option>
+                  <option value="digitaltwin">Digital Twins</option>
+                  <option value="showroom">Virtual Showrooms</option>
+                  <option value="gaming">Gaming Assets</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 24px;">
+                <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Project Message</label>
+                <textarea id="message" class="form-input" style="width: 100%; padding: 12px; background: rgba(5,8,22,0.6); border: 1px solid var(--border-light); border-radius: 8px; color: #fff; height: 120px;" placeholder="Tell us about the assets you need..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/#" class="logo">
+            <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+          </a>
+          <p>Merging premium 3D modeling, photorealistic rendering, and app-less retail WebAR experiences to drive business results.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/3d-modeling">3D Modeling</a></li>
+            <li><a href="/services/3d-rendering">Product Rendering</a></li>
+            <li><a href="/services/3d-animation">3D Animations</a></li>
+            <li><a href="/services/ar-experiences">AR / VR Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="/#">E-Commerce</a></li>
+            <li><a href="/#">Furniture Manufacturing</a></li>
+            <li><a href="/#">Real Estate Visualization</a></li>
+            <li><a href="/#">Industrial Digital Twins</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/#portfolio">Our Work</a></li>
+            <li><a href="/#why-us">Why Choose Us</a></li>
+            <li><a href="/#process">Our Process</a></li>
+            <li><a href="/#contact">Free Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vertex XR. All rights reserved. Built with Antigravity.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Services Script -->
+  <script src="/services/services.js"></script>
+</body>
+
+</html>

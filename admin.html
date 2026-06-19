@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Vertex XR</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">
+        <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+      </div>
+      <h2>Admin Portal</h2>
+      <p>Enter your admin token to access the lead dashboard.</p>
+      <div id="login-error" class="login-error" style="display:none;">
+        <i class="fa-solid fa-circle-exclamation"></i> Invalid token. Try again.
+      </div>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="token-input">Admin Token</label>
+          <input type="password" id="token-input" placeholder="Enter token..." autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" id="login-btn">
+          <span>Sign In</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MAIN DASHBOARD (hidden until login) -->
+  <div id="dashboard" class="dashboard" style="display:none;">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <i class="fa-solid fa-cube"></i> VERTEX<span>XR</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" id="nav-leads">
+          <i class="fa-solid fa-users"></i>
+          <span>Leads</span>
+        </a>
+        <a href="/" target="_blank" class="nav-item" id="nav-site">
+          <i class="fa-solid fa-globe"></i>
+          <span>View Site</span>
+        </a>
+      </nav>
+      <button class="logout-btn" id="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Top Bar -->
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Lead Management</h1>
+          <p class="page-subtitle">All contact form submissions from the website.</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn btn-secondary" id="refresh-btn">
+            <i class="fa-solid fa-rotate-right"></i> Refresh
+          </button>
+          <button class="btn btn-primary" id="export-btn">
+            <i class="fa-solid fa-file-csv"></i> Export CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="stats-row" id="stats-row">
+        <div class="stat-card" id="stat-total">
+          <div class="stat-icon total"><i class="fa-solid fa-inbox"></i></div>
+          <div class="stat-info">
+            <span class="stat-num" id="stat-num-total">—</span>
+            <span class="stat-label">Total Leads</span>
+          </div>
+        </div>
+        <div class="stat-card" id="stat-new">
+          <div class="stat-icon new"><i class="fa-solid fa-star"></i></div>
+          <div class="stat-info">
+            <span class="stat-num" id="stat-num-new">—</span>
+            <span class="stat-label">New</span>
+          </div>
+        </div>
+        <div class="stat-card" id="stat-contacted">
+          <div class="stat-icon contacted"><i class="fa-solid fa-phone-volume"></i></div>
+          <div class="stat-info">
+            <span class="stat-num" id="stat-num-contacted">—</span>
+            <span class="stat-label">Contacted</span>
+          </div>
+        </div>
+        <div class="stat-card" id="stat-closed">
+          <div class="stat-icon closed"><i class="fa-solid fa-circle-check"></i></div>
+          <div class="stat-info">
+            <span class="stat-num" id="stat-num-closed">—</span>
+            <span class="stat-label">Closed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter + Search Bar -->
+      <div class="filter-bar">
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Search by name, email or company...">
+        </div>
+        <div class="filter-tabs" id="filter-tabs">
+          <button class="filter-tab active" data-status="all">All</button>
+          <button class="filter-tab" data-status="New">New</button>
+          <button class="filter-tab" data-status="Contacted">Contacted</button>
+          <button class="filter-tab" data-status="Closed">Closed</button>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div class="loader-wrapper" id="loader">
+        <div class="spinner"></div>
+        <p>Loading leads...</p>
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="empty-state" style="display:none;">
+        <i class="fa-solid fa-inbox"></i>
+        <h3>No leads yet</h3>
+        <p>When someone submits the contact form, leads will appear here.</p>
+      </div>
+
+      <!-- Leads Table -->
+      <div class="table-wrapper" id="table-wrapper" style="display:none;">
+        <table class="leads-table" id="leads-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Contact</th>
+              <th>Company</th>
+              <th>Service</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody">
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- LEAD DETAIL MODAL -->
+  <div class="modal-overlay" id="lead-modal" style="display:none;">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header">
+        <div class="modal-avatar" id="modal-avatar"></div>
+        <div>
+          <h3 id="modal-name"></h3>
+          <p id="modal-email"></p>
+        </div>
+        <span class="status-badge" id="modal-status-badge"></span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-field">
+          <span class="modal-label"><i class="fa-solid fa-building"></i> Company</span>
+          <span id="modal-company">—</span>
+        </div>
+        <div class="modal-field">
+          <span class="modal-label"><i class="fa-solid fa-shapes"></i> Service</span>
+          <span id="modal-service"></span>
+        </div>
+        <div class="modal-field">
+          <span class="modal-label"><i class="fa-solid fa-calendar"></i> Submitted</span>
+          <span id="modal-date"></span>
+        </div>
+        <div class="modal-field full">
+          <span class="modal-label"><i class="fa-solid fa-comment"></i> Message</span>
+          <p id="modal-message" class="modal-message-text"></p>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <span class="modal-label">Update Status:</span>
+        <div class="status-btn-group" id="status-btn-group"></div>
+        <button class="btn btn-danger" id="modal-delete-btn">
+          <i class="fa-solid fa-trash"></i> Delete Lead
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELETE CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="confirm-modal" style="display:none;">
+    <div class="modal-card confirm-card">
+      <div class="confirm-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <h3>Delete Lead?</h3>
+      <p>This action is permanent and cannot be undone.</p>
+      <div class="confirm-actions">
+        <button class="btn btn-secondary" id="confirm-cancel">Cancel</button>
+        <button class="btn btn-danger" id="confirm-delete">Yes, Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+
+</html>
