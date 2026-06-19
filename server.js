@@ -13,10 +13,13 @@ const Datastore = require('nedb-promises');
 // ─── Config ────────────────────────────────────────────────────────────────
 const PORT        = process.env.PORT || 3000;
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || 'vertexXR-admin-2026';
-const DB_DIR      = path.join(__dirname, 'db');
+// Use Vercel's writable /tmp directory if running on Vercel, otherwise local 'db' folder
+const DB_DIR      = process.env.VERCEL ? '/tmp' : path.join(__dirname, 'db');
 
-// Ensure db directory exists
-if (!fs.existsSync(DB_DIR)) fs.mkdirSync(DB_DIR, { recursive: true });
+// Ensure db directory exists (only if not on Vercel)
+if (!process.env.VERCEL && !fs.existsSync(DB_DIR)) {
+  fs.mkdirSync(DB_DIR, { recursive: true });
+}
 
 // ─── Database Setup ─────────────────────────────────────────────────────────
 const leadsDb = Datastore.create({
@@ -221,14 +224,18 @@ servicePages.forEach(p => {
 });
 
 // ─── Start Server ────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log('');
-  console.log('  ╔══════════════════════════════════════════╗');
-  console.log(`  ║   VERTEX XR Backend running on :${PORT}   ║`);
-  console.log('  ╠══════════════════════════════════════════╣');
-  console.log(`  ║  Site:   http://localhost:${PORT}           ║`);
-  console.log(`  ║  Admin:  http://localhost:${PORT}/admin     ║`);
-  console.log(`  ║  Token:  ${ADMIN_TOKEN}  ║`);
-  console.log('  ╚══════════════════════════════════════════╝');
-  console.log('');
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log('');
+    console.log('  ╔══════════════════════════════════════════╗');
+    console.log(`  ║   VERTEX XR Backend running on :${PORT}   ║`);
+    console.log('  ╠══════════════════════════════════════════╣');
+    console.log(`  ║  Site:   http://localhost:${PORT}           ║`);
+    console.log(`  ║  Admin:  http://localhost:${PORT}/admin     ║`);
+    console.log(`  ║  Token:  ${ADMIN_TOKEN}  ║`);
+    console.log('  ╚══════════════════════════════════════════╝');
+    console.log('');
+  });
+}
+
+module.exports = app;
